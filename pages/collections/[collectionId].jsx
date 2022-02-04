@@ -47,7 +47,6 @@ const Collection = () => {
 
     const sdk = new ThirdwebSDK(
       provider.getSigner(),
-      'https://eth-rinkeby.alchemyapi.io/v2/YOljFl-OMKeo6wC5c9YBPnTP82i1BDqb'
     )
     return sdk.getNFTModule(collectionId)
   }, [provider])
@@ -67,7 +66,6 @@ const Collection = () => {
 
     const sdk = new ThirdwebSDK(
       provider.getSigner(),
-      'https://rinkeby.infura.io/v3/a464b9152d8c466c8a94a514fce8e837'
     )
     return sdk.getMarketplaceModule(
       '0x9cd16579696c30A2534678648458fe51ed711BA9'
