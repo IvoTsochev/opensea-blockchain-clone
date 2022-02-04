@@ -40,14 +40,14 @@ const Collection = () => {
   const [nfts, setNfts] = useState([])
   const [listings, setListings] = useState([])
 
-  //
+  // https://eth-rinkeby.alchemyapi.io/v2/YOljFl-OMKeo6wC5c9YBPnTP82i1BDqb
 
   const nftModule = useMemo(() => {
     if (!provider) return
 
     const sdk = new ThirdwebSDK(
       provider.getSigner(),
-      'https://rinkeby.infura.io/v3/a464b9152d8c466c8a94a514fce8e837'
+      'https://eth-rinkeby.alchemyapi.io/v2/YOljFl-OMKeo6wC5c9YBPnTP82i1BDqb'
     )
     return sdk.getNFTModule(collectionId)
   }, [provider])
@@ -70,7 +70,7 @@ const Collection = () => {
       'https://rinkeby.infura.io/v3/a464b9152d8c466c8a94a514fce8e837'
     )
     return sdk.getMarketplaceModule(
-      '0x93A771F7ce845C33381f677489cF21a5964EDD0b'
+      '0x9cd16579696c30A2534678648458fe51ed711BA9'
     )
   }, [provider])
 

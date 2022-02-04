@@ -13,7 +13,10 @@ const style = {
 }
 
 export default function Home () {
+
+
   const { address, connectWallet } = useWeb3()
+
 
   const welcomeUser = (userName, toastHandler = toast) => {
     toastHandler.success(
@@ -26,6 +29,7 @@ export default function Home () {
       }
     )
   }
+
 
   useEffect(() => {
     if (!address) return
